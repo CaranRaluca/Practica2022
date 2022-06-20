@@ -111,3 +111,62 @@ cat krypton4| tr "JDSRIVKWBGXUYQNMC" "THEQVLWDONFSPARUI"
 
 #Nu am decofificat litera A insa incerc parola "ARUTE". Nu e corecta. Incerc "BRUTE". Parola corecta este BRUTE.
 
+
+
+#LEVEL4->5
+caran_raluca@caran:~$ ssh krypton4@krypton.labs.overthewire.org -p 2231
+krypton4@krypton:~$ cd /krypton/krypton4
+krypton4@krypton:/krypton/krypton4$ ls -al
+total 28
+drwxr-xr-x 2 root     root     4096 May 19  2020 .
+drwxr-xr-x 8 root     root     4096 May 19  2020 ..
+-rw-r----- 1 krypton4 krypton4 1740 May 19  2020 found1
+-rw-r----- 1 krypton4 krypton4 2943 May 19  2020 found2
+-rw-r----- 1 krypton4 krypton4  287 May 19  2020 HINT
+-rw-r----- 1 krypton4 krypton4   10 May 19  2020 krypton5
+-rw-r----- 1 krypton4 krypton4 1385 May 19  2020 README
+#Pentru a afla cheia folosita , am folosit urmatorul site https://www.dcode.fr/vigenere-cipher, unde am copiat continutul celor 2 fisiere found1 si found2 si am completat campul corespunzator lungimii cheii. Prima cheie sugerata este : FREKEY
+krypton4@krypton:/krypton/krypton4$ cat krypton5
+HCIKV RJOX
+#Am introdus CIPHERTEXT-ul si cheia. Mi-a fost generat plaintextul : CLEAR TEXT. 
+
+
+
+#LEVEL5->6
+caran_raluca@caran:~$ ssh krypton5@krypton.labs.overthewire.org -p 2231    - cu parola:CLEARTEXT
+krypton5@krypton:~$ cd /krypton/krypton5
+krypton5@krypton:/krypton/krypton5$ ls -a
+.  ..  found1  found2  found3  krypton6  README
+#Pentru a afla cheia folosita , am folosit urmatorul site https://www.dcode.fr/vigenere-cipher, unde am copiat continutul celor 3 fisiere found1,found2 si found3. Neavand nicio informatie despre cheie am folosit Kasiski test. Prima cheie sugerata este : KEYLENGHT.Am copiat continutul fisierului krypton6 si am introdus cheia folosita. Parola obtinuta este: RANDOM.
+
+
+
+#LEVEL6->7
+caran_raluca@caran:~$ ssh krypton6@krypton.labs.overthewire.org -p 2231 - cu parola RANDOM
+krypton6@krypton:~$ cd /krypton/krypton6
+krypton6@krypton:/krypton/krypton6$ ls -al
+total 52
+drwxr-xr-x 3 root     root      4096 May 19  2020 .
+drwxr-xr-x 8 root     root      4096 May 19  2020 ..
+-rwsr-x--- 1 krypton7 krypton6 13344 May 19  2020 encrypt6
+-rw-r----- 1 krypton6 krypton6   164 May 19  2020 HINT1
+-rw-r----- 1 krypton6 krypton6    11 May 19  2020 HINT2
+-rw-r----- 1 krypton7 krypton7    11 May 19  2020 keyfile.dat
+-rw-r----- 1 krypton6 krypton6    15 May 19  2020 krypton7
+drwxr-xr-x 2 root     root      4096 May 19  2020 onetime
+-rw-r----- 1 krypton6 krypton6  4342 May 19  2020 README
+krypton6@krypton:/krypton/krypton6$ cat HINT1
+The 'random' generator has a limited number of bits, and is periodic.
+Entropy analysis and a good look at the bytes in a hex editor will help.
+
+There is a pattern!
+krypton6@krypton:/krypton/krypton6$ cat HINT2
+8 bit LFSR
+#LSFR-Linear Feedback Shift Register
+#Nu am acces la keyfile.dat. Creez un director in /tmp/ in care creez un link catre keyfile.dat si ofer directorului permisiuni de r,w,x pentru toti utilizatorii.
+krypton6@krypton:/krypton/krypton6$ mkdir /tmp/carank6
+krypton6@krypton:/krypton/krypton6$ cd /tmp/carank6
+krypton6@krypton:/tmp/carank6$ ln -s /krypton/krypton6/keyfile.dat
+krypton6@krypton:/tmp/carank6$ ls
+keyfile.dat
+krypton6@krypton:/tmp/carank6$ chmod 777 .
