@@ -15,9 +15,9 @@ Am trecut de nivelurile L24->L32 din jocul BANDIT de pe site-ul OverTheWire, ast
 Ziua 3 : 20.07.2022
 Am trecut de nivelurile L0->L6 din jocul Krypton.
 Pentru a trece challenge-urile de la jocul Krypton am citit despre urmatoarele cifruri:
-ROT 13
-Cesar Cipher
-Frequency Analysis: https://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html (site-ul care m-a ajutat in rezolvarea nivelului L3->4)
+ROT 13,
+Cesar Cipher,
+Frequency Analysis: https://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html (site-ul care m-a ajutat in rezolvarea nivelului L3->4),
 Vigenere Cipher (https://www.dcode.fr/vigenere-cipher).
 Am trecut de nivelurile L0->L2 din jocul Leviathan.
 Comenzi noi:
