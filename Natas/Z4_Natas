@@ -1,0 +1,81 @@
+ZIUA 4 : 21.06.2022
+
+#Natas - joc din categoria serverside web-security
+#Pentru fiecare nivel accesez site-ul http://natasX.natas.labs.overthewire.org cu credentialele potrivite.
+
+
+#LEVEL0
+Am accesat site-ul http://natas0.natas.labs.overthewire.org de pe un browser web , folosind username-ul natas0 si parola natas0. A fost afisat urmatorul mesaj: You can find the password for the next level on this page. Am apasat click dreapta-> View Page Source. 
+<!--The password for natas1 is gtVrDuiDfck831PqWsLEZy5gyDz1clto -->
+
+
+
+#LEVEL0->1
+Mesajul afisat:" You can find the password for the next level on this page, but rightclicking has been blocked! "
+Am apasat combinatia de taste CTRL+SHIFT+C. La "Debugger" am gasit codul sursa care continea si parola.
+<!--The password for natas2 is ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi -->
+
+
+#LEVEL1->2
+Mesajul afisat:"There is nothing on this page "
+Am apasat combinatia de taste CTRL+SHIFT+C. Codul sursa contine o imagine: <img src="files/pixel.png">. Am accesat imaginea respectiva:http://natas2.natas.labs.overthewire.org/files/. Pagina care s-a deschis contine un fisier text: users.txt cu urmatorul continut:
+username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH.
+Parola pentru nivelul urmator este: sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14. 
+
+
+
+#LEVEL2->3
+Mesajul afisat: "There is nothing on this page." 
+Studiez codul sursa. HINT : !-- No more information leaks!! Not even Google will find it this time... --> Am cautat pe net cum poate fi ascuns un website in google. Una dintre variante este block crawling care este realizata prin robots.txt file. 
+Am accesat site-ul http://natas3.natas.labs.overthewire.org/robots.txt. Mesaj afisat: 
+"User-agent: *		Disallow: /s3cr3t/".
+Am accesat site-ul http://natas3.natas.labs.overthewire.org/s3cr3t/. Din fisierul users.txt am extras parola pentru urmatorul nivel: natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ. 
+
+
+
+#LEVEL3->4
+Mesajul afisat: "Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"". 
+Am dat refresh paginii si mi-a aparut urmatorul mesaj: "Access disallowed. You are visiting from "http://natas4.natas.labs.overthewire.org/index.php" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"".
+Nu am acces la site. Am intalat pe browserul FireFox extensia Tamper Data. In campul Referer (care contine adresa paginii de pe care s-a facut cererea) am modificat cu http://natas5.natas.labs.overthewire.org/index.php.
+Noul mesaj afisat: Access granted. The password for natas5 is iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq .
+
+
+
+#LEVEL4->5
+Mesajul afisat:"Access disallowed. You are not logged in."
+Am folosit extensia Tamper Data. Am modificat variabila cookie setand variabila loggedin pe 1.
+Noul mesaj afisat:Access granted. The password for natas6 is aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1.
+
+
+
+#LEVEL5->6
+Trebuie sa introduc o parola. Am acces la codul sursa. Acesta face o comparatie a parolei introduce de utilizator cu parola corecta. Contine urmatoarea biblioteca : include "includes/secret.inc".  Accesez urmatorul site in cautarea variabilei $secret: http://natas6.natas.labs.overthewire.org/includes/secret.inc. 
+Mesajul afisat: $secret = "FOEIUWGHFEEUHOFUOIU". 
+Access granted. The password for natas7 is 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
+
+
+
+#LEVEL6->7
+Ma uit pe codul sursa. Primesc urmatorul HINT: <!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 -->
+Accesez urmatorul site: http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8. Am gasit parola pentru nivelul urmator: DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe.
+
+
+
+#LEVEL7->8
+Codul sursa ne ofera urmatoarele informatii: trebuie sa aflu o parola care satisface: encodeSecret($_POST['secret']) == $encodedSecret. Functia encodeSecret returneaza: bin2hex(strrev(base64_encode($secret))).Functia bin2hex converteste un string de caractere ASCII in valori hexadecimale. Stiu valoarea variabilei $encodedSecret , deci voi aplica procesul invers pt a afla parola corecta:$encodedSecret->hex2bin->strrev->base64 decode.
+caran_raluca@caran:~$ echo  "3d3d516343746d4d6d6c315669563362" | xxd -r -p | rev | base64 -d
+oubWYf2kBq - parola 
+Mesajul afisat dupa introducerea parolei: Access granted. The password for natas9 is W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl. 
+
+
+
+#LEVEL8->9
+Site-ul imi afiseaza cuvintele din fisierul dictionary.txt care contin cuvantul cheie introdus de mine. La fiecare cuv introdus observ ca se modifica var needle.  Stiu ca parola pentru nivelul urmator se gaseste in fisierul /etc/natas_webpass/natas10. Needle = cat /etc/natas_webpass/natas10.
+Accesez site-ul http://natas9.natas.labs.overthewire.org/?needle=;cat%20/etc/natas_webpass/natas10. 
+Parola este:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu.

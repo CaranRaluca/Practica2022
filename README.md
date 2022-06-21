@@ -12,7 +12,7 @@ Am citit despre : setuid binaries, chei publice si chei private pentru conectare
 Ziua 2 : 17.06.2022
 Am trecut de nivelurile L24->L32 din jocul BANDIT de pe site-ul OverTheWire, astfel finalizand jocul. Am invatat o noua comanda: git .
 
-Ziua 3 : 20.07.2022
+Ziua 3 : 20.06.2022
 Am trecut de nivelurile L0->L6 din jocul Krypton.
 Pentru a trece challenge-urile de la jocul Krypton am citit despre urmatoarele cifruri:
 ROT 13,
@@ -23,3 +23,8 @@ Am trecut de nivelurile L0->L2 din jocul Leviathan.
 Comenzi noi:
 ltrace-urmareste toate apelurile de biblioteca pe care le face un anumit program in timpul executiei
 
+Ziua 4 : 21.06.2022
+Am citit despre:
+-how to hide a website from search results (https://www.searchenginejournal.com/google-explains-how-to-hide-a-website-from-search-results/428341/#close)
+-Proxy server
+Am adaugat in browserul FireFox extensia Tamper Data care mi-a permis sa modific parametrii cererilor si raspunsurilor HTTP/HTTPS.
