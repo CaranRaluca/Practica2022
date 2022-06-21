@@ -79,3 +79,16 @@ Mesajul afisat dupa introducerea parolei: Access granted. The password for natas
 Site-ul imi afiseaza cuvintele din fisierul dictionary.txt care contin cuvantul cheie introdus de mine. La fiecare cuv introdus observ ca se modifica var needle.  Stiu ca parola pentru nivelul urmator se gaseste in fisierul /etc/natas_webpass/natas10. Needle = cat /etc/natas_webpass/natas10.
 Accesez site-ul http://natas9.natas.labs.overthewire.org/?needle=;cat%20/etc/natas_webpass/natas10. 
 Parola este:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu.
+
+
+
+#LEVEL9->10
+Nivel asemanator cu anteriorul. Nu pot aplica aceeasi metoda pentru ca nu pot folosi caracterul ";":
+if(preg_match('/[;|&]/',$key)) {print "Input contains an illegal character!";}
+In campul "Find words containing" am completat cu : . /etc/natas_webpass/natas11 #
+Parola urmatorului nivel este: U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK.
+
+
+
+#LEVEL10->11
+Mesajul afisat: Cookies are protected with XOR encryption. Din codul sursa observ ca cookies-urile sunt criptate folosind XOR cipher. Aflu valoarea cookie-ului default folosind extensia Tamper Data:  ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw%3D

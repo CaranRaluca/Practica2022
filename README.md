@@ -24,7 +24,9 @@ Comenzi noi:
 ltrace-urmareste toate apelurile de biblioteca pe care le face un anumit program in timpul executiei
 
 Ziua 4 : 21.06.2022
+Am trecut de primele 10 niveluri din jocul Natas.
 Am citit despre:
 -how to hide a website from search results (https://www.searchenginejournal.com/google-explains-how-to-hide-a-website-from-search-results/428341/#close)
 -Proxy server
+-XOR cipher
 Am adaugat in browserul FireFox extensia Tamper Data care mi-a permis sa modific parametrii cererilor si raspunsurilor HTTP/HTTPS.
