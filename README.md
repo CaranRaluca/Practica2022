@@ -30,3 +30,10 @@ Am citit despre:
 -Proxy server
 -XOR cipher
 Am adaugat in browserul FireFox extensia Tamper Data care mi-a permis sa modific parametrii cererilor si raspunsurilor HTTP/HTTPS.
+
+Ziua 5 : 22.06.2022
+Am rezolvat CTF-uri de pe site-ul picoCTF , acumuland un punctaj de 1740 puncte:
+-4 din categoria Web Exploitation;
+-5 din categoria Cryptography;
+-1 din categoria Forensics;
+-16 din categoria General Skills.

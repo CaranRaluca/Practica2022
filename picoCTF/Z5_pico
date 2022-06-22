@@ -1,0 +1,198 @@
+Ziua 5 : 22.06.2022
+
+#Obedient Cat
+picoCTF{s4n1ty_v3r1f13d_f28ac910}
+
+
+
+#MOD 26
+#ROT 13 decoder
+picoCTF{next_time_I'll_try_2_rounds_of_rot13_aFxtzQWR}
+
+
+#Wave a flag
+caran_raluca@caran:~$ wget https://mercury.picoctf.net/static/b28b6021d6040b086c2226ebeb913bc2/warm
+caran_raluca@caran:~$ chmod +x warm
+caran_raluca@caran:~$ ./warm
+Hello user! Pass me a -h to learn what I can do!
+caran_raluca@caran:~$ ./warm -h
+Oh, help? I actually don't do much, but I do have this flag here: picoCTF{b1scu1ts_4nd_gr4vy_d6969390}
+
+
+
+
+#WARMED UP
+Flag-ul este: picoCTF{61}
+
+
+
+#Python Wrangling
+Am descarcat scriptul, parola si flag-ul.
+wget-utilitar pentru a descarca fisiere de pe Internet
+caran_raluca@caran:~$ wget https://mercury.picoctf.net/static/0bf545252b5120845e3b568b9ad0277e/ende.py
+caran_raluca@caran:~$ python3 ende.py -d flag.txt.en
+Please enter the password:6008014f6008014f6008014f6008014f
+picoCTF{4p0110_1n_7h3_h0us3_6008014f}
+
+
+
+#Information
+caran_raluca@caran:~$ file cat.jpg
+cat.jpg: JPEG image data, JFIF standard 1.02, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 2560x1598, components 3
+caran_raluca@caran:~$ exiftool cat.jpg
+Campul License pare codificat in baza64.
+caran_raluca@caran:~$ echo "cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9" | base64 -d
+picoCTF{the_m3tadata_1s_modified}
+
+
+
+#Cookies
+Am folosit extensia Tamper Data. Am modificat campul Cookie. Am observat ca se afiseaza de fiecare data alt cookie. Valoarea 18 mi-a oferit flag-ul.
+Flag: picoCTF{3v3ry1_l0v3s_c00k135_94190c8a}.
+
+
+#Nice netcat...
+caran_raluca@caran:~$  nc mercury.picoctf.net 22342
+Transform numerele afisate in caractere ASCII.
+picoCTF{g00d_k1tty!_n1c3_k1tty!_5fb5e51d}
+
+
+#Tab, Tab, Attack
+Am descarcat arhiva.
+caran_raluca@caran:~$ unzip Addadshashanammu
+caran_raluca@caran:~$ Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku/fang-of-haynekhtnamet
+*ZAP!* picoCTF{l3v3l_up!_t4k3_4_r35t!_f3553887}
+
+
+
+
+#2WARM
+picoCTF{101010}
+
+
+
+#The Numbers
+Fiecare numar din imagine are echivalent o litera din alfabet.
+PICOCTF{THENUMBERSMASON}
+
+
+
+
+#Easy1
+Vigenere Cipher cu cheia SOLVECRYPTO. M-am ajutat de site-ul https://www.dcode.fr/vigenere-cipher.
+Flag-ul generat: picoCTF{CRYPTOISFUN}.
+
+
+
+#13
+13ROT cipher
+picoCTF{not_too_bad_of_a_problem}
+
+
+
+#Caesar
+Am folosit un decodificator Cesar online unde am luat prin incercari valorile cheii. Plaintextul fusese shiftat cu 4 pozitii.
+Flag: picoCTF{crossingtherubicondjneoach}
+
+
+
+#Insp3ct0r
+Am inspectat site-ul. Cele 3 parti le-am gasit in Inspector,Debugger si Syle Editor.
+picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?2e7b23e3}
+
+
+
+#what's a net cat?
+caran_raluca@caran:~$ nc jupiter.challenges.picoctf.org 41120
+You're on your way to becoming the net cat master
+picoCTF{nEtCat_Mast3ry_3214be47}.
+
+
+
+#Static ain't always noise
+caran_raluca@caran:~/Downloads$ bash ltdis.sh  static
+Attempting disassembly of static ...
+Disassembly successful! Available at: static.ltdis.x86_64.txt
+Ripping strings from binary with file offsets...
+Any strings found in static have been written to static.ltdis.strings.txt with file offset
+caran_raluca@caran:~/Downloads$ cat static.ltdis.strings.txt
+....
+ 1020 picoCTF{d15a5m_t34s3r_98d35619}
+......
+
+
+
+#strings it
+caran_raluca@caran:~$ strings strings  | egrep "pico"
+picoCTF{5tRIng5_1T_7f766a23}
+
+
+
+#First Grep
+caran_raluca@caran:~/Downloads$ egrep "pico" file
+picoCTF{grep_is_good_to_find_things_5af9d829}
+
+
+
+#Scavenger Hunt
+Here's the first part of the flag: picoCTF{t
+/* CSS makes the page look nice, and yes, it also has part of the flag. Here's part 2: h4ts_4_l0 */
+/* How can I keep Google from indexing my website? */ - Accesez site-ul http://mercury.picoctf.net:27393/robots.txt.
+User-agent: *
+Disallow: /index.html
+# Part 3: t_0f_pl4c
+# I think this is an apache server... can you Access the next flag?
+Accesez site-ul : http://mercury.picoctf.net:27393/.htaccess
+# Part 4: 3s_2_lO0k
+# I love making websites on my Mac, I can Store a lot of information there.
+Accesez site-ul : http://mercury.picoctf.net:27393/.DS_Store. -DS_STore este un fisier special MAC care memoreaza informatii despre folderul curent.
+Congrats! You completed the scavenger hunt. Part 5: _d375c750}
+Flag-ul este : picoCTF{th4ts_4_l0t_0f_pl4c3s_2_lO0k_d375c750}.
+
+
+
+#PW Crack 1
+Am inspectat continutul scriptului dat. Parola 8713 genereaza flag-ul.
+caran_raluca@caran:~/Downloads$ python3 ./level1.py
+Please enter correct password for flag: 8713
+Welcome back... your flag, user:
+picoCTF{545h_r1ng1ng_1b2fd683}
+
+
+
+#PW Crack 2
+Verific continutul scriptului. Observ ca parola corecta este comparata cu rezultatul sumei: chr(0x64) + chr(0x65) + chr(0x37) + chr(0x36). chr(x)-functie care returneaza caracterul specific valorii ASCII
+Cu ajutorul tabelei ASCII am obtinut parola : de76
+caran_raluca@caran:~/Downloads$ python3 ./level2.py
+Please enter correct password for flag: de76
+Welcome back... your flag, user:
+picoCTF{tr45h_51ng1ng_489dea9a}.
+
+
+
+#Serpentine
+Am analizat scriptul . Am adaugat urmatoarea linie de cod: print_flag().
+Am obtinut flag-ul : picoCTF{7h3_r04d_l355_7r4v3l3d_8e47d128}.
+
+
+
+#mus1c
+HINT:Do you think you can master rockstar?
+Rockstar - Rockstar is a dynamically typed Turing-complete programming language designed for creating computer programs that are also song lyrics.
+Am pus continutul fisierului lyrics.txt intr-un Rockstar decoder.Mi-a fost generata o lista de numere. Fiecare nr reprezinta un caracter ASCII. Am obtinut flag-ul : picoCTF{rrrocknrn0113r}
+
+
+
+
+#Where are the robots?
+HINT evident.
+Accesez site-ul https://jupiter.challenges.picoctf.org/problem/56830/1bb4c.html.
+Mesaj afisat: User-agent: *
+Disallow: /1bb4c.html
+Accesez site-ul https://jupiter.challenges.picoctf.org/problem/56830/1bb4c.html.
+Flag-ul gasit: picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c} .
+
+
+
+#Pixelated
+Pentru a obtine flag-ul trebuie sa suprapun cele 2 imagini. (visual cryptography)
