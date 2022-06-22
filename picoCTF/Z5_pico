@@ -194,5 +194,20 @@ Flag-ul gasit: picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c} .
 
 
 
-#Pixelated
-Pentru a obtine flag-ul trebuie sa suprapun cele 2 imagini. (visual cryptography)
+#Vigenere
+Am folosit un decodificator Vigenere online, ajutandu-ma de cheie.
+Falg-ul: picoCTF{D0NT_US3_V1G3N3R3_C1PH3R_ae82272q}
+
+
+
+
+#Glitch Cat
+caran_raluca@caran:~$ nc saturn.picoctf.net 65353
+'picoCTF{gl17ch_m3_n07_' + chr(0x39) + chr(0x63) + chr(0x34) + chr(0x32) + chr(0x61) + chr(0x34) + chr(0x35) + chr(0x64) + '}'
+picoCTF{gl17ch_m3_n07_9c42a45d}
+
+
+
+#Glory of the Garden
+caran_raluca@caran:~/Downloads$ strings garden.jpg | egrep "pico"
+Here is a flag "picoCTF{more_than_m33ts_the_3y33dd2eEF5}" 
