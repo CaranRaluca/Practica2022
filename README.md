@@ -40,7 +40,9 @@ Am rezolvat CTF-uri de pe site-ul picoCTF , acumuland un punctaj de 1990 puncte:
 
 Ziua 6 : 23.06.2022
 Am rezolvat CTF-uri de pe site-ul picoCTF:
--7 din categoria Web Exploitation;
+-8 din categoria Web Exploitation;
 -6 din categoria Cryptography;
--9 din categoria General Skills 
+-9 din categoria General Skills
+-7 din categoria Reverse Engineering
+-3 din categoria Forensics
 Am citit despre: PlayFair Cypher;https://infosecscout.com/two-files-with-same-md5-hash/;MD5 message-digest algorithm.

@@ -457,3 +457,130 @@ picoCTF{j5_15_7r4n5p4r3n7_a8788e61}
 #picobrowser
 Am schimbat UseAgent-ul in PicoBrowser.
 Flag: picoCTF{p1c0_s3cr3t_ag3nt_84f9c865}
+
+
+
+#Client-side-again(N)
+Am cautat un JavaScript Deobfuscator online. Am introdus urmatoarea parte de cod gasita in Inspector:
+  var _0x5a46=['f49bf}','_again_e','this','Password\x20Verified','Incorrect\x20password','getElementById','value','substring','picoCTF{','not_this'];(function(_0x4bd822,_0x2bd6f7){var _0xb4bdb3=function(_0x1d68f6){while(--_0x1d68f6){_0x4bd822['push'](_0x4bd822['shift']());}};_0xb4bdb3(++_0x2bd6f7);}(_0x5a46,0x1b3));var _0x4b5b=function(_0x2d8f05,_0x4b81bb){_0x2d8f05=_0x2d8f05-0x0;var _0x4d74cb=_0x5a46[_0x2d8f05];return _0x4d74cb;};function verify(){checkpass=document[_0x4b5b('0x0')]('pass')[_0x4b5b('0x1')];split=0x4;if(checkpass[_0x4b5b('0x2')](0x0,split*0x2)==_0x4b5b('0x3')){if(checkpass[_0x4b5b('0x2')](0x7,0x9)=='{n'){if(checkpass[_0x4b5b('0x2')](split*0x2,split*0x2*0x2)==_0x4b5b('0x4')){if(checkpass[_0x4b5b('0x2')](0x3,0x6)=='oCT'){if(checkpass[_0x4b5b('0x2')](split*0x3*0x2,split*0x4*0x2)==_0x4b5b('0x5')){if(checkpass['substring'](0x6,0xb)=='F{not'){if(checkpass[_0x4b5b('0x2')](split*0x2*0x2,split*0x3*0x2)==_0x4b5b('0x6')){if(checkpass[_0x4b5b('0x2')](0xc,0x10)==_0x4b5b('0x7')){alert(_0x4b5b('0x8'));}}}}}}}}else{alert(_0x4b5b('0x9'));}}
+Am obtinut urmatorul cod:
+var _0x5a46 = ["f49bf}", "_again_e", "this", "Password Verified", "Incorrect password", "getElementById", "value", "substring", "picoCTF{", "not_this"];
+(function (_0x4bd822, _0x2bd6f7) {
+  var _0xb4bdb3 = function (_0x1d68f6) {
+    while (--_0x1d68f6) {
+      _0x4bd822.push(_0x4bd822.shift());
+    }
+  };
+  _0xb4bdb3(++_0x2bd6f7);
+}(_0x5a46, 435));
+var _0x4b5b = function (_0x2d8f05, _0x4b81bb) {
+  _0x2d8f05 = _0x2d8f05 - 0;
+  var _0x4d74cb = _0x5a46[_0x2d8f05];
+  return _0x4d74cb;
+};
+function verify() {
+  checkpass = document[_0x4b5b("0x0")]("pass")[_0x4b5b("0x1")];
+  split = 4;
+  if (checkpass[_0x4b5b("0x2")](0, split * 2) == _0x4b5b("0x3")) {
+    if (checkpass[_0x4b5b("0x2")](7, 9) == "{n") {
+      if (checkpass[_0x4b5b("0x2")](split * 2, split * 2 * 2) == _0x4b5b("0x4")) {
+        if (checkpass[_0x4b5b("0x2")](3, 6) == "oCT") {
+          if (checkpass[_0x4b5b("0x2")](split * 3 * 2, split * 4 * 2) == _0x4b5b("0x5")) {
+            if (checkpass.substring(6, 11) == "F{not") {
+              if (checkpass[_0x4b5b("0x2")](split * 2 * 2, split * 3 * 2) == _0x4b5b("0x6")) {
+                if (checkpass[_0x4b5b("0x2")](12, 16) == _0x4b5b("0x7")) {
+                  alert(_0x4b5b("0x8"));
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } else {
+    alert(_0x4b5b("0x9"));
+  }
+}
+
+
+
+#Power Cookie
+Am folosit extensia Tamper Data. Am modificat campul Cookie, setand variabila Admin.
+picoCTF{gr4d3_A_c00k13_5d2505be}
+
+
+
+
+#vault-door-1
+picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_f6daf4}
+
+
+
+#crackme.py
+Modific scriptul apeland functia : decode_secret(bezos_cc_secret).
+caran_raluca@caran:~/Downloads$ python3 crackme.py
+picoCTF{1|\/|_4_p34|\|ut_ef5b69a3}
+
+
+
+#file-run2
+caran_raluca@caran:~/Downloads$ chmod +x run
+caran_raluca@caran:~/Downloads$ ./run Hello!
+The flag is: picoCTF{F1r57_4rgum3n7_be0714da}
+
+
+
+#GDB Test Drive
+picoCTF{d3bugg3r_dr1v3_197c378a}
+
+
+
+#patchme.py
+caran_raluca@caran:~/Downloads$ python3 patchme.flag.py
+Please enter correct password for flag: ak98-=90adfjhgj321sleuth9000
+Welcome back... your flag, user:
+picoCTF{p47ch1ng_l1f3_h4ck_c4a4688b}
+
+
+
+#Safe Opener
+Ma uit pe codul din fisierul descarcat.
+caran_raluca@caran:~/Downloads$ echo "cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz" | base64 -d
+pl3as3_l3t_m3_1nt0_th3_saf3
+
+
+
+
+#unpackme.py
+caran_raluca@caran:~/Downloads$ python3 unpackme.flag.py
+What's the password? a
+That password is incorrect.
+Ma uit in cod. Observ ca se executa functia plain.decode. Incerc sa printez rezultatul.
+caran_raluca@caran:~/Downloads$ python3 unpackme.flag.py
+
+pw = input('What\'s the password? ')
+
+if pw == 'batteryhorse':
+  print('picoCTF{175_chr157m45_5274ff21}')
+else:
+  print('That password is incorrect.')
+
+
+
+#Wireshark doo dooo do doo
+Am deschis captura. Click dreapta->Follow TCP stream.
+Am gasit urmatoarea secventa intr-unul dintre segmentele transmise: Gur synt vf cvpbPGS{c33xno00_1_f33_h_qrnqorrs}. Flag-ul este criptat. Folosesc un ROT13 decoder online.
+Flag-ul este: The flag is picoCTF{p33kab00_1_s33_u_deadbeef}.
+
+
+
+#Shark on WIRE 1
+picoCTF{StaT31355_636f6e6e}
+
+
+
+
+#shark on wire 2
+Follow UDP Stream
+Am gasit string-ul start (stream-ul 32) si string-ul end ( stream-ul 60 ). Majoritatea pachetelor transmise au adresa ip sursa:10.0.0.6. Fac o filtrare dupa aceasta adresa. Toate pachetele obtinute in urma filtrarii au aceeasi lungime, acelasi ip dest, iar portul de forma 5xyz. Iau ultimele 3 cifre ale fiecarui port si verific echivalentul nr in tabela ASCII.
+picoCTF{p1LLf3r3d_data_v1a_st3g0}
