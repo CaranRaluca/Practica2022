@@ -416,3 +416,44 @@ Am gasit pe urmatorul site 2 fisiere cu acelasi hash MD5: https://www.mathstat.d
 Le-am transformat in pdf-uri, le-am incarcat pe site si am obtinut un cod sursa.
 Am obtinut urmatorul FLAG: picoCTF{c0ngr4ts_u_r_1nv1t3d_da36cc1b}.
 
+
+
+
+#Login
+Codul sursa:
+(async()=>{await new Promise((e=>window.addEventListener("load",e))),document.querySelector("form").addEventListener("submit",(e=>{e.preventDefault();const r={u:"input[name=username]",p:"input[name=password]"},t={};for(const e in r)t[e]=btoa(document.querySelector(r[e]).value).replace(/=/g,"");return"YWRtaW4"!==t.u?alert("Incorrect Username"):"cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ"!==t.p?alert("Incorrect Password"):void alert(`Correct Password! Your flag is ${atob(t.p)}.`)}))})();
+Flag-ul va fi obtinut prin decodificarea in baza64 a string-ului: cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ .
+picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
+
+
+
+#Includes
+picoCTF{1nclu51v17y_1of2_f7w_2of2_df589022}
+
+
+
+#Inspect HTML
+picoCTF{1n5p3t0r_0f_h7ml_1fd8425b}
+
+
+
+
+#Local Authority
+function checkPassword(username, password)
+{
+  if( username === 'admin' && password === 'strongPassword098765' )
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+picoCTF{j5_15_7r4n5p4r3n7_a8788e61}
+
+
+
+#picobrowser
+Am schimbat UseAgent-ul in PicoBrowser.
+Flag: picoCTF{p1c0_s3cr3t_ag3nt_84f9c865}

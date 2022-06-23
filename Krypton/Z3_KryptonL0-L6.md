@@ -95,16 +95,27 @@ tr "SQN" "AND"
 
 
 KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS
+
 KEVVW BGE THE VEIE VXBMN YQUUK BNWCU ANMTE 
+
 KEVVW BGE THE VEVE VXBMN YQUUK BNWCU ANMTE 
+
 KELL WBGE THE LEVEL XBMN YQUUK BNWCU ANMTE 
+
 WELL WBGE THE LEVEL XBMN YQUUW BNWCU ANMTE
+
 WELL DONE THE LEVEL XOMN YQUUW ONDCU ANMTE
+
 WELL DONE THE LEVEL FO MN YQUU WO N D CU ANM TE 
+
 WELL DONE THE LEVEL FO MN YQ SSWO N D C S ANM TE 
+
 WELL DONE THE LEVEL FO MN PASSWO N D C S ANM TE
+
 WELL DONE THE LEVEL FO MR PASSWORD C S ANM TE
+
 WELL DONE THE LEVEL FOUR PASSWORD C S A  RUTE
+
 WELL DONE THE LEVEL FOUR PASSWORD IS  ARUTE
 
 cat krypton4| tr "JDSRIVKWBGXUYQNMC" "THEQVLWDONFSPARUI"
@@ -114,8 +125,8 @@ cat krypton4| tr "JDSRIVKWBGXUYQNMC" "THEQVLWDONFSPARUI"
 
 
 #LEVEL4->5
-caranraluca@caran:~$ ssh krypton4@krypton.labs.overthewire.org -p 2231
-krypton4@krypton:~$ cd /krypton/krypton4
+caranraluca@caran: ssh krypton4@krypton.labs.overthewire.org -p 2231
+krypton4@krypton: cd /krypton/krypton4
 krypton4@krypton:/krypton/krypton4$ ls -al
 total 28
 drwxr-xr-x 2 root     root     4096 May 19  2020 .
@@ -133,7 +144,7 @@ HCIKV RJOX
 
 
 #LEVEL5->6
-caranraluca@caran:~$ ssh krypton5@krypton.labs.overthewire.org -p 2231    - cu parola:CLEARTEXT
+caranraluca@caran: ssh krypton5@krypton.labs.overthewire.org -p 2231    - cu parola:CLEARTEXT
 krypton5@krypton:~$ cd /krypton/krypton5
 krypton5@krypton:/krypton/krypton5$ ls -a
 .  ..  found1  found2  found3  krypton6  README
@@ -142,7 +153,7 @@ krypton5@krypton:/krypton/krypton5$ ls -a
 
 
 #LEVEL6->7
-caranraluca@caran:~$ ssh krypton6@krypton.labs.overthewire.org -p 2231 - cu parola RANDOM
+caranraluca@caran: ssh krypton6@krypton.labs.overthewire.org -p 2231 - cu parola RANDOM
 krypton6@krypton:~$ cd /krypton/krypton6
 krypton6@krypton:/krypton/krypton6$ ls -al
 total 52

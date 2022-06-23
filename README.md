@@ -3,7 +3,7 @@
 Ziua 1 : 16.06.2022
 Am trecut de nivelurile L0->L23 din jocul BANDIT de pe site-ul OverTheWire.
 Comnezi noi:
--pentru conctare de la distanta : ssh , telnet, conectare prin SSL(Secure Sockets Layer) , nc
+-pentru conectare de la distanta : ssh , telnet, conectare prin SSL(Secure Sockets Layer) , nc
 -pentru scanarea porturilor : nmap
 -pentru decomprimare : gzip -d , bzip2 -d , tar  
 -pentru executarea unor comenzi planificate : cron
@@ -40,7 +40,7 @@ Am rezolvat CTF-uri de pe site-ul picoCTF , acumuland un punctaj de 1990 puncte:
 
 Ziua 6 : 23.06.2022
 Am rezolvat CTF-uri de pe site-ul picoCTF:
--2 din categoria Web Exploitation;
+-7 din categoria Web Exploitation;
 -6 din categoria Cryptography;
 -9 din categoria General Skills 
 Am citit despre: PlayFair Cypher;https://infosecscout.com/two-files-with-same-md5-hash/;MD5 message-digest algorithm.
