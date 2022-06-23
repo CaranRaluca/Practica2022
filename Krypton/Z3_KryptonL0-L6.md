@@ -58,7 +58,7 @@ CAESARISEASY
 
 
 #LEVEL3->4
-caran_raluca@caran:~/Krypton$ ssh krypton3@krypton.labs.overthewire.org -p 2231
+caranraluca@caran:~/Krypton$ ssh krypton3@krypton.labs.overthewire.org -p 2231
 krypton3@krypton:/krypton$ ls 
 krypton1  krypton2  krypton3  krypton4  krypton5  krypton6
 krypton3@krypton:/krypton$ cd /krypton/krypton3
@@ -114,7 +114,7 @@ cat krypton4| tr "JDSRIVKWBGXUYQNMC" "THEQVLWDONFSPARUI"
 
 
 #LEVEL4->5
-caran_raluca@caran:~$ ssh krypton4@krypton.labs.overthewire.org -p 2231
+caranraluca@caran:~$ ssh krypton4@krypton.labs.overthewire.org -p 2231
 krypton4@krypton:~$ cd /krypton/krypton4
 krypton4@krypton:/krypton/krypton4$ ls -al
 total 28
@@ -133,7 +133,7 @@ HCIKV RJOX
 
 
 #LEVEL5->6
-caran_raluca@caran:~$ ssh krypton5@krypton.labs.overthewire.org -p 2231    - cu parola:CLEARTEXT
+caranraluca@caran:~$ ssh krypton5@krypton.labs.overthewire.org -p 2231    - cu parola:CLEARTEXT
 krypton5@krypton:~$ cd /krypton/krypton5
 krypton5@krypton:/krypton/krypton5$ ls -a
 .  ..  found1  found2  found3  krypton6  README
@@ -142,7 +142,7 @@ krypton5@krypton:/krypton/krypton5$ ls -a
 
 
 #LEVEL6->7
-caran_raluca@caran:~$ ssh krypton6@krypton.labs.overthewire.org -p 2231 - cu parola RANDOM
+caranraluca@caran:~$ ssh krypton6@krypton.labs.overthewire.org -p 2231 - cu parola RANDOM
 krypton6@krypton:~$ cd /krypton/krypton6
 krypton6@krypton:/krypton/krypton6$ ls -al
 total 52

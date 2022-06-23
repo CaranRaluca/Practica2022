@@ -210,4 +210,209 @@ picoCTF{gl17ch_m3_n07_9c42a45d}
 
 #Glory of the Garden
 caran_raluca@caran:~/Downloads$ strings garden.jpg | egrep "pico"
-Here is a flag "picoCTF{more_than_m33ts_the_3y33dd2eEF5}" 
+Here is a flag "picoCTF{more_than_m33ts_the_3y33dd2eEF5}"
+
+
+
+
+
+
+
+
+Ziua 6 : 23.06.2022
+#Who are you?(N)
+Folosesc extensia Tamper Data. Inlocuiesc campul UserAgent cu "PicoBrowser".
+Imi este afisat mesajul: I don't trust users visiting from another site. Modific campul Referer:http://mercury.picoctf.net:52362/.
+
+
+#Get AHead(N)
+Folosind extensia Tamper Data: Observ ca metoda folosita pentru rosu este HEAD, iar pentru albastru este POST.
+
+
+
+#PlayNice
+M-am ajutat de un decodificator PlayFair online.
+caran_raluca@caran:~$ nc mercury.picoctf.net 19354
+Here is the alphabet: n5vgru7ehz1klja8s9340m2wcxbd6pqfitoy
+Here is the encrypted message: hnjm2e4t51v16gsg104i4oi9wmrqli
+What is the plaintext message? 7v8441mfrerhdr8rh20f2fya20noaq
+Congratulations! Here's the flag: dbc8bf9bae7152d35d3c200c46a0fa30
+
+
+
+#Tapping
+Trebuie sa traduc un mesaj in codul Morse.
+Flag-ul obtinut:PICOCTF{M0RS3C0D31SFUN1261438181}
+
+
+
+#La cifra de
+Am introdus ciphertext-ul intr-un program de decodificare a codurilor Vigenere, care nu solicita cheia de criptare. (https://www.guballa.de/vigenere-solver)
+"It is interesting how in history people often receive credit for things they did not create
+During the course of history, the Vigenère Cipher has been reinvented many times
+It was falsely attributed to Blaise de Vigenère as it was originally described in 1553 by Giovan Battista Bellaso in his book La cifra del. Sig. Giovan Battista Bellaso
+For the implementation of this cipher a table is formed by sliding the lower half of an ordinary alphabet for an apparently random number of places with respect to the upper halfpicoCTF{b311a50_0r_v1gn3r3_c1ph3r6fe60eaa}
+The first well-documented description of a polyalphabetic cipher however, was made around 1467 by Leon Battista Alberti.
+The Vigenère Cipher is therefore sometimes called the Alberti Disc or Alberti Cipher.
+In 1508, Johannes Trithemius invented the so-called tabula recta (a matrix of shifted alphabets) that would later be a critical component of the Vigenère Cipher.
+Bellaso’s second booklet appeared in 1555 as a continuation of the first. The lower halves of the alphabets are now shifted regularly, but the alphabets and the index letters are mixed by means of a mnemonic key phrase, which can be different with each correspondent."
+Flag-ul este: picoCTF{b311a50_0r_v1gn3r3_c1ph3r6fe60eaa}.
+
+
+
+
+#Flags
+Steagurile afisate in imagine reprezinta steaguri internationale maritime folosite pentru comunicarea intre nave. Fiecare flag are asociat un caracter si o semnificatie. (https://en.wikipedia.org/wiki/International_maritime_signal_flags)
+Flag-ul este: PICOCTF{F1AG5AND5TUFF}.
+
+
+
+#Mr-Worldwide
+Flag-ul contine niste coordonate. Am introdus coordonatele respective pe google maps. Am gasit locatiile:Kyoto, Odesa, Dayton ,Instanbul,Abu Dhabi, Kuala Lumpur, Addis Abeba, Loja, Amsterdam, Sleepy Hallow ,Kodiak , Alexandria.
+Am luat prima litera a fiecarei locatii si am obtinut flag-ul : picoCTF{KODIAK_ALASKA}.
+
+
+
+#basic-mod1
+Am calculator restul impartirii la 37 a numerelor din fisier si am asociat fiecarui rest obtinut caracterul potrivit.
+Flag-ul obtinut:picoCTF{r0und_n_r0und_79c18fb3}
+
+
+
+#Codebook
+caran_raluca@caran:~/Downloads$ chmod +x code.py
+caran_raluca@caran:~/Downloads$ python3 code.py
+picoCTF{c0d3b00k_455157_d9aa2df2}
+
+
+
+#convertme.py
+caran_raluca@caran:~/Downloads$ chmod +x convertme.py
+caran_raluca@caran:~/Downloads$ python3 convertme.py
+If 81 is in decimal base, what is it in binary base?
+Answer: 1010001
+That is correct! Here's your flag: picoCTF{4ll_y0ur_b4535_722f6b39}
+
+
+
+#fixme1.py
+caran_raluca@caran:~/Downloads$ gedit fixme1.py
+caran_raluca@caran:~/Downloads$ python3 fixme1.py
+That is correct! Here's your flag: picoCTF{1nd3nt1ty_cr1515_6a476c8f}
+
+
+
+#fixme2.py
+caran_raluca@caran:~/Downloads$ gedit fixme2.py
+caran_raluca@caran:~/Downloads$ python3 fixme2.py
+That is correct! Here's your flag: picoCTF{3qu4l1ty_n0t_4551gnm3nt_4863e11b}
+
+
+
+#HashingJobApp
+Am folosit site-ul: http://www.md5.cz/.
+caran_raluca@caran:~/Downloads$ nc saturn.picoctf.net 54555
+Please md5 hash the text between quotes, excluding the quotes: 'babies'
+Answer:
+8374d0764f1466e601c624254222ad53
+8374d0764f1466e601c624254222ad53
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'Japan'
+Answer:
+53a577bb3bc587b0c28ab808390f1c9b
+53a577bb3bc587b0c28ab808390f1c9b
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'kilts'
+Answer:
+64cb30b3223e083fa0a2dad43fae9a0e
+64cb30b3223e083fa0a2dad43fae9a0e
+Correct.
+picoCTF{4ppl1c4710n_r3c31v3d_674c1de2}
+
+
+
+#runme.py
+caran_raluca@caran:~/Downloads$ chmod u+x runme.py
+caran_raluca@caran:~/Downloads$ ./runme.py
+picoCTF{run_s4n1ty_run}
+
+
+
+#level3.py
+caran_raluca@caran:~/Downloads$ python3 level3.py
+Please enter correct password for flag: 1ea2
+Welcome back... your flag, user:
+picoCTF{m45h_fl1ng1ng_6f98a49f}
+
+
+
+#PW Crack 4
+Pentru a incerca variantele de parola sugerate am modificat codul astfel:
+    for user_pw in pos_pw_list:
+        #user_pw = input("Please enter correct password for flag: ")
+        user_pw_hash = hash_pw(user_pw)
+        if( user_pw_hash == correct_pw_hash ):
+            print("Welcome back... your flag, user:")
+            decryption = str_xor(flag_enc.decode(), user_pw)
+            print(decryption)
+            return
+        print("That password is incorrect")
+Flag-ul obtinut dupa rularea scriptului: picoCTF{fl45h_5pr1ng1ng_ae0fb77c}
+
+
+
+#PW Crack 5
+Am modificat codul astfel:
+def level_5_pw_check():
+    #user_pw = input("Please enter correct password for flag: ")
+    f=open("dictionary.txt","r")
+    for x in f:
+        user_pw=x.strip("\n")
+        user_pw_hash = hash_pw(user_pw)
+
+        if( user_pw_hash == correct_pw_hash ):
+            print("Welcome back... your flag, user:")
+            decryption = str_xor(flag_enc.decode(), user_pw)
+            print(decryption)
+            return
+        print("That password is incorrect")
+Flag-ul obtinut dupa rulare: picoCTF{h45h_sl1ng1ng_fffcda23} .
+
+
+
+#dont-use-client-side
+Am gasit urmatoarea functie de verificare Inspector, pe baza careia am construit flag-ul:
+  function verify() {
+    checkpass = document.getElementById("pass").value;
+    split = 4;
+    if (checkpass.substring(0, split) == 'pico') {
+      if (checkpass.substring(split*6, split*7) == '706c') {
+        if (checkpass.substring(split, split*2) == 'CTF{') {
+         if (checkpass.substring(split*4, split*5) == 'ts_p') {
+          if (checkpass.substring(split*3, split*4) == 'lien') {
+            if (checkpass.substring(split*5, split*6) == 'lz_b') {
+              if (checkpass.substring(split*2, split*3) == 'no_c') {
+                if (checkpass.substring(split*7, split*8) == '5}') {
+                  alert("Password Verified")
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+    else {
+      alert("Incorrect password");
+    }
+  }
+Flag-ul obtinut: picoCTF{no_clients_plz_b706c5}.
+
+
+
+#It is my Birthday
+Am gasit pe urmatorul site 2 fisiere cu acelasi hash MD5: https://www.mathstat.dal.ca/~selinger/md5collision/. (erase, hello)
+Le-am transformat in pdf-uri, le-am incarcat pe site si am obtinut un cod sursa.
+Am obtinut urmatorul FLAG: picoCTF{c0ngr4ts_u_r_1nv1t3d_da36cc1b}.
+
