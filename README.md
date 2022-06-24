@@ -2,7 +2,7 @@
 
 Ziua 1 : 16.06.2022
 Am trecut de nivelurile L0->L23 din jocul BANDIT de pe site-ul OverTheWire.
-Comnezi noi:
+Comenzi noi:
 -pentru conectare de la distanta : ssh , telnet, conectare prin SSL(Secure Sockets Layer) , nc
 -pentru scanarea porturilor : nmap
 -pentru decomprimare : gzip -d , bzip2 -d , tar  
@@ -53,3 +53,4 @@ Am rezolvat in continuare CTF-uri de pe site-ul picoCTF:
 -5 din categoria Forensics
 -1 din categoria Binary Exploitation
 -2 din categoria General Skills
+Total punctaj picoCTF: 6960 puncte. 
