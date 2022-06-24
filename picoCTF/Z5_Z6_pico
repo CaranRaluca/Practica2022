@@ -584,3 +584,86 @@ picoCTF{StaT31355_636f6e6e}
 Follow UDP Stream
 Am gasit string-ul start (stream-ul 32) si string-ul end ( stream-ul 60 ). Majoritatea pachetelor transmise au adresa ip sursa:10.0.0.6. Fac o filtrare dupa aceasta adresa. Toate pachetele obtinute in urma filtrarii au aceeasi lungime, acelasi ip dest, iar portul de forma 5xyz. Iau ultimele 3 cifre ale fiecarui port si verific echivalentul nr in tabela ASCII.
 picoCTF{p1LLf3r3d_data_v1a_st3g0}
+
+
+
+Ziua 7 : 24.06.2022
+#Lookey here
+caran_raluca@caran:~/Downloads$ cat anthem.flag.txt  | egrep "pico"
+      we think that the men of picoCTF{gr3p_15_@w3s0m3_4c479940}
+
+
+
+#So Meta
+caran_raluca@caran:~/Downloads$ exiftool pico_img.png | egrep "picoCTF"
+Artist                          : picoCTF{s0_m3ta_d8944929}
+
+
+
+#extensions
+caran_raluca@caran:~/Downloads$ mv flag.txt poza.png
+Flag: picoCTF{now_you_know_about_extensions}
+
+
+
+#Magikarp Ground Mission
+~ctf-player@pico-chall$ ls
+1of3.flag.txt  instructions-to-2of3.txt
+ctf-player@pico-chall$ cat 1of3.flag.txt
+picoCTF{xxsh_
+ctf-player@pico-chall$ cat instructions-to-2of3.txt
+Next, go to the root of all things, more succinctly `/`
+ctf-player@pico-chall$ cd /
+ctf-player@pico-chall$ ls
+2of3.flag.txt  dev   instructions-to-3of3.txt  media  proc  sbin  tmp
+bin	       etc   lib		       mnt    root  srv   usr
+boot	       home  lib64		       opt    run   sys   var
+ctf-player@pico-chall$ cat 2of3.flag.txt
+0ut_0f_\/\/4t3r_
+ctf-player@pico-chall$ cat instructions-to-3of3.txt
+Lastly, ctf-player, go home... more succinctly `~`
+ctf-player@pico-chall$ cd ~
+ctf-player@pico-chall$ ls
+3of3.flag.txt  drop-in
+ctf-player@pico-chall$ cat 3of3.flag.txt
+1118a9a4}
+Flag-ul: picoCTF{xxsh_0ut_0f_\/\/4t3r_1118a9a4}
+
+
+
+#Bases
+caran_raluca@caran:~$ echo "bDNhcm5fdGgzX3IwcDM1" | base64 -d
+l3arn_th3_r0p35
+
+
+
+#basic-file-exploit
+In functia data_read() exista o verificare ((entry_number = strtol(entry, NULL, 10)) == 0). Daca aceasta conditie este indeplinita in terminal se va afisa flag-ul.
+caran_raluca@caran:~$ nc saturn.picoctf.net 49698
+Hi, welcome to my echo chamber!
+Type '1' to enter a phrase into our database
+Type '2' to echo a phrase in our database
+Type '3' to exit the program
+1
+1
+Please enter your data:
+1
+1
+Please enter the length of your data:
+1
+1
+Your entry number is: 1
+Write successful, would you like to do anything else?
+2
+2
+Please enter the entry number of your data:
+0
+0
+picoCTF{M4K3_5UR3_70_CH3CK_Y0UR_1NPU75_1B9F5942}
+
+
+
+#file-run1
+caran_raluca@caran:~/Downloads$ chmod u+x run
+caran_raluca@caran:~/Downloads$ ./run
+The flag is: picoCTF{U51N6_Y0Ur_F1r57_F113_9bc52b6b}

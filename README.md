@@ -46,3 +46,10 @@ Am rezolvat CTF-uri de pe site-ul picoCTF:
 -7 din categoria Reverse Engineering
 -3 din categoria Forensics
 Am citit despre: PlayFair Cypher;https://infosecscout.com/two-files-with-same-md5-hash/;MD5 message-digest algorithm.
+
+Ziua 7: 24.06.2022
+Am rezolvat in continuare CTF-uri de pe site-ul picoCTF:
+-1 din categoria Reverse Engineering
+-5 din categoria Forensics
+-1 din categoria Binary Exploitation
+-2 din categoria General Skills
